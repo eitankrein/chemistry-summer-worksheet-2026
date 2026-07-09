@@ -30,6 +30,7 @@
   <div class="wrap">
     <h1>עבודת קיץ מסכמת לכיתה י״א — כימיה</h1>
     <nav class="tabs" aria-label="ניווט בין פרקי העבודה">
+<button class="module-tab" type="button" data-module="instructions">הנחיות</button>
 <button class="module-tab" type="button" data-module="mc">רבות־ברירה</button>
 <button class="module-tab" type="button" data-module="q1">שאלה 1</button>
 <button class="module-tab" type="button" data-module="q2">שאלה 2</button>
@@ -44,6 +45,45 @@
 <main class="frame-shell">
   <iframe id="moduleFrame" title="פרק העבודה"></iframe>
 </main>
+<textarea id="src-instructions" hidden>&lt;!doctype html&gt;
+&lt;html lang="he" dir="rtl"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;הנחיות לתלמידים — עבודת קיץ בכימיה&lt;/title&gt;
+&lt;style&gt;
+:root{--bg:#f5f7fb;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d0d5dd;--primary:#1d4ed8;--soft:#eff6ff;--warn:#fff7ed;--warn-border:#fdba74}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Noto Sans Hebrew","Segoe UI",sans-serif;line-height:1.7}
+header{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;padding:24px 16px}
+main,.wrap{max-width:980px;margin:0 auto;padding:16px}
+h1{margin:0 0 6px;font-size:1.7rem}.lead{margin:0;color:#e8f0ff}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0;box-shadow:0 2px 12px rgba(16,24,40,.06)}
+h2{margin:0 0 10px;font-size:1.25rem}.steps{padding-right:22px}.steps li{margin:8px 0}.note{background:var(--warn);border:1px solid var(--warn-border);border-radius:14px;padding:12px;margin-top:10px}.small{color:var(--muted);font-size:.95rem}
+button{border:0;border-radius:999px;padding:10px 16px;background:var(--primary);color:white;cursor:pointer;font:inherit;margin-top:8px}.formula{direction:ltr;unicode-bidi:isolate;display:inline-block}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;&lt;div class="wrap"&gt;&lt;h1&gt;הנחיות לתלמידים&lt;/h1&gt;&lt;p class="lead"&gt;קראו לפני תחילת העבודה.&lt;/p&gt;&lt;/div&gt;&lt;/header&gt;
+&lt;main&gt;
+&lt;section class="card"&gt;
+  &lt;h2&gt;איך עובדים בדף?&lt;/h2&gt;
+  &lt;ol class="steps"&gt;
+    &lt;li&gt;עברו על הפרקים לפי הסדר, משמאל לימין בשורת הניווט העליונה.&lt;/li&gt;
+    &lt;li&gt;בכל סעיף כתבו תחילה תשובה משלכם. בשאלות פתוחות אפשר לפתוח “כיוון חשיבה” רק לאחר שנכתבה תשובה.&lt;/li&gt;
+    &lt;li&gt;לאחר כתיבת התשובה תוכלו להציג מענה להשוואה, לבצע בדיקה עצמית ולסמן הערכה עצמית.&lt;/li&gt;
+    &lt;li&gt;בשאלות חישוב הציגו דרך חישוב, לא רק תשובה סופית. הקפידו על יחידות.&lt;/li&gt;
+    &lt;li&gt;בניסוח תגובות כימיות הקפידו על ניסוח נטו כאשר כך נדרש, על איזון, על מטענים ועל מצבי צבירה.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;
+&lt;section class="card"&gt;
+  &lt;h2&gt;שמירה והגשה&lt;/h2&gt;
+  &lt;p&gt;התשובות נשמרות בדפדפן שבו אתם עובדים. אל תמחקו את נתוני הדפדפן ואל תעברו לדפדפן אחר באמצע העבודה.&lt;/p&gt;
+  &lt;p&gt;בסיום העבודה עברו ללשונית &lt;strong&gt;סיכום למורה&lt;/strong&gt;, רעננו את הסיכום, העתיקו את הדוח והגישו אותו לפי הנחיות המורה.&lt;/p&gt;
+  &lt;div class="note"&gt;אם כפתור ההעתקה אינו פועל, סמנו את הדוח המפורט והעתיקו ידנית בעזרת Ctrl+C.&lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
 <textarea id="src-mc" hidden>&lt;!doctype html&gt;
 &lt;html lang="he" dir="rtl"&gt;
 &lt;head&gt;
@@ -5727,7 +5767,9 @@ renderNav(); renderCards(); buildSummary(); showCurrent(); markSaved();
 &lt;header&gt;&lt;div class="wrap"&gt;&lt;h1&gt;סיכום למורה — כל דף העבודה&lt;/h1&gt;&lt;/div&gt;&lt;/header&gt;
 &lt;main&gt;
   &lt;section class="card"&gt;
-    &lt;p&gt;כאן מרוכז הדוח היחיד למורה עבור כל דף העבודה.&lt;/p&gt;
+    &lt;h2&gt;הנחיות סיום והגשה&lt;/h2&gt;
+    &lt;p&gt;בסיום העבודה לחצו על “רענן סיכום”, בדקו שהדוח כולל את התשובות שלכם, ואז לחצו על “העתק דוח למורה”.&lt;/p&gt;
+    &lt;p&gt;את הדוח המועתק יש להגיש לפי הנחיות המורה. אם ההעתקה האוטומטית אינה פועלת, סמנו את הדוח המפורט והעתיקו ידנית בעזרת Ctrl+C.&lt;/p&gt;
     &lt;div&gt;
       &lt;button type="button" id="refreshReport"&gt;רענן סיכום&lt;/button&gt;
       &lt;button type="button" class="secondary" id="copyReport"&gt;העתק דוח למורה&lt;/button&gt;
@@ -6000,13 +6042,13 @@ buildReport();
     if(!holder) return;
     frame.title = buttons.find(b=>b.dataset.module===key)?.textContent || 'פרק העבודה';
     frame.srcdoc = holder.value;
-    try { localStorage.setItem('chem_final_current_module_v3', key); } catch(e) {}
+    try { localStorage.setItem('chem_final_current_module_v5', key); } catch(e) {}
     window.scrollTo({top:0, behavior:'smooth'});
   }
   buttons.forEach(btn=>btn.addEventListener('click',()=>loadModule(btn.dataset.module)));
-  let start = 'mc';
-  try { start = localStorage.getItem('chem_final_current_module_v3') || start; } catch(e) {}
-  if(!document.getElementById('src-' + start)) start = 'mc';
+  let start = 'instructions';
+  try { start = localStorage.getItem('chem_final_current_module_v5') || start; } catch(e) {}
+  if(!document.getElementById('src-' + start)) start = 'instructions';
   loadModule(start);
 })();
 </script>
